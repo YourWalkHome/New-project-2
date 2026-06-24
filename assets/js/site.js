@@ -54,133 +54,133 @@ if (contactForm) {
 }
 
 const whisperTopics = {
-  cook: {
-    kicker: "Kitchen guidance",
-    title: "Cook With Mushrooms",
-    intro: "White Oyster Mushrooms are gentle, savoury, and quick to cook. They suit simple meals as well as chef-led dishes.",
+  grow: {
+    kicker: "Growing curiosity",
+    title: "I'm curious about growing mushrooms",
+    intro: "Hmm, that's a good mushroom question. Mushrooms are quiet workers: they like the right food, airflow, humidity, temperature, and patience.",
     defaultAnswer:
-      "Start with a hot pan, a little oil or butter, and enough space for the mushrooms to release moisture. Let them take on light colour before adding garlic, herbs, soy, cream, lemon, or whatever direction your dish is walking toward.",
+      "Start with the basics: mushrooms need clean conditions, a suitable substrate, steady moisture, and enough fresh air. Fancy A Fungi focuses on getting those quiet details consistent before chasing anything fancy.",
     contactBody:
-      "Hi Benny, I have a cooking question after visiting Ask The Mushroom Whisper.",
+      "Hi Benny, I have a mushroom growing question after visiting Ask The Mushroom Whisper.",
     questions: [
       {
-        label: "How should I cook White Oyster Mushrooms?",
+        label: "What do mushrooms need to grow well?",
         answer:
-          "Tear or slice them into pieces, cook them in a hot pan with a little oil, and let moisture cook off before adding seasoning. They are lovely with garlic, thyme, soy, miso, butter, lemon, chilli, or a gentle cream sauce.",
+          "They need the right food, moisture, fresh air, temperature, and cleanliness. Small changes matter. Too dry and they stall; too wet and things can go sideways; too little fresh air and the mushrooms can grow long and leggy.",
       },
       {
-        label: "What do they pair with?",
+        label: "Why does consistency matter?",
         answer:
-          "White Oyster Mushrooms pair well with eggs, pasta, rice, noodles, sourdough, roasted vegetables, chicken, seafood, soft herbs, and savoury sauces. Their mild flavour makes them flexible without disappearing.",
+          "Mushrooms respond to their environment. A steady rhythm helps the grower understand what changed, what worked, and what needs adjusting. That is why Fancy A Fungi is careful about contamination control and repeatable production.",
       },
       {
-        label: "Can I use them in quick meals?",
+        label: "Can I grow mushrooms at home?",
         answer:
-          "Yes. A quick pan-fry can become toast topping, an omelette filling, a noodle bowl, a side for steak or eggs, or the start of a simple pasta. Give them heat and space first, then build the dish around them.",
+          "Yes, but start simple. Use a reputable kit, follow the instructions, and pay attention to what you see and smell. Tell me the timing, colour, moisture, and airflow first, and we can have a more useful look.",
       },
     ],
   },
-  store: {
-    kicker: "Freshness guidance",
-    title: "Store & Use Fresh Mushrooms",
-    intro: "Fresh mushrooms are happiest with airflow, gentle handling, and a cool place to rest until you are ready to cook.",
+  kit: {
+    kicker: "Grow-kit check",
+    title: "Something looks wrong with my grow kit",
+    intro: "Let's have a proper look at that. With grow kits, the little clues matter: colour, smell, texture, moisture, airflow, and timing.",
     defaultAnswer:
-      "Keep mushrooms in the fridge, ideally in breathable packaging or a paper bag. Avoid sealing them tightly in plastic for long periods, because trapped moisture can shorten their useful life.",
+      "First, do not panic. Tell me what you are seeing before changing too much. A photo can help, but unusual colours, sour smells, slimy patches, or fast-spreading fuzzy growth should be treated cautiously and checked with the kit supplier or a knowledgeable grower.",
     contactBody:
-      "Hi Benny, I have a storage or freshness question after visiting Ask The Mushroom Whisper.",
+      "Hi Benny, I have a grow-kit question after visiting Ask The Mushroom Whisper.",
+    questions: [
+      {
+        label: "What should I describe first?",
+        answer:
+          "Tell me the colour, smell, texture, how many days since opening, whether the kit looks too wet or too dry, and where it is sitting. Small clue, big difference with mushrooms.",
+      },
+      {
+        label: "When should I stop and ask someone?",
+        answer:
+          "If you notice strong sour or rotten smells, black or green patches, sliminess, or anything spreading quickly, pause and check with the kit supplier or a local grower. Do not taste anything from a kit that seems off.",
+      },
+      {
+        label: "Could it just be normal mushroom fuzz?",
+        answer:
+          "Sometimes white fuzzy growth is just mycelium doing its work. But colour, smell, timing, and texture all matter. If it is not clean white, or it smells wrong, treat it as a question for a real person with the kit in front of them.",
+      },
+    ],
+  },
+  cook: {
+    kicker: "Kitchen and freshness",
+    title: "How do I store or cook these?",
+    intro: "Good fresh mushrooms deserve a gentle hand and a hot pan. White Oysters are quick, savoury, and forgiving once you know their rhythm.",
+    defaultAnswer:
+      "Keep them cool, give them a little airflow, and cook them with enough heat to let moisture move off. Then bring in garlic, butter, herbs, soy, lemon, chilli, cream, or whatever direction dinner is taking.",
+    contactBody:
+      "Hi Benny, I have a cooking or storage question after visiting Ask The Mushroom Whisper.",
     questions: [
       {
         label: "How should I store them?",
         answer:
-          "Keep them refrigerated and avoid crushing them. A paper bag or breathable container helps manage moisture. If they arrive in packaging, keep them cool and use them while they still look firm and fresh.",
+          "Keep them in the fridge and avoid crushing them. Breathable packaging or a paper bag helps manage moisture. Try to use them while they still look firm, fresh, and lively.",
       },
       {
-        label: "When should I use them?",
+        label: "How should I cook them?",
         answer:
-          "Sooner is better. Fancy A Fungi works around fresh harvest timing, so the best eating experience usually comes from using them within the first few days after receiving them.",
+          "Tear or slice them, give them space in a hot pan, and let them take on light colour before adding the softer flavours. If the pan is crowded, they steam before they brown.",
       },
       {
-        label: "Should I wash them?",
+        label: "What do they go with?",
         answer:
-          "If needed, brush away any growing material or give them a very quick rinse just before cooking, then pat dry. Avoid soaking mushrooms, as they can take on water and lose texture.",
+          "Eggs, sourdough, pasta, rice, noodles, roasted vegetables, chicken, seafood, soft herbs, butter, miso, soy, cream, and lemon all sit nicely with White Oyster Mushrooms.",
       },
     ],
   },
-  learn: {
-    kicker: "Mushroom knowledge",
-    title: "Learn Mushroom Things",
-    intro: "A small place for friendly mushroom facts, growing basics, and what makes Fancy A Fungi's approach distinct.",
+  difference: {
+    kicker: "From the farm",
+    title: "What makes Fancy A Fungi different?",
+    intro: "This is where the farm voice matters. Fancy A Fungi is not trying to sound bigger than it is; it is trying to grow well, supply honestly, and keep the relationship direct.",
     defaultAnswer:
-      "Fancy A Fungi currently focuses on White Oyster Mushrooms grown in the Lockyer Valley with rainwater, organic soybean hulls, untreated hardwood sawdust, and a harvest-to-order mindset.",
+      "Fancy A Fungi grows White Oyster Mushrooms in the Lockyer Valley with a harvest-to-order mindset, rainwater, organic soybean hulls, untreated hardwood sawdust, and direct grower relationships.",
     contactBody:
-      "Hi Benny, I have a mushroom learning question after visiting Ask The Mushroom Whisper.",
+      "Hi Benny, I have a Fancy A Fungi question after visiting Ask The Mushroom Whisper.",
     questions: [
-      {
-        label: "What makes White Oyster Mushrooms special?",
-        answer:
-          "They are delicate, fast-cooking gourmet mushrooms with a mild savoury flavour and beautiful texture. They are approachable for home cooks and useful for chefs because they can carry many different flavour directions.",
-      },
       {
         label: "What does harvest-to-order mean?",
         answer:
-          "It means supply conversations are tied closely to what is ready to harvest. The goal is fresher mushrooms, clearer expectations, and less time between the farm and the person cooking them.",
+          "It means supply conversations stay close to what is actually ready. That helps keep produce fresher, expectations clearer, and the relationship more direct.",
       },
       {
-        label: "What are they grown on?",
-        answer:
-          "Fancy A Fungi's current production approach uses organic soybean hulls and untreated hardwood sawdust, with rainwater as part of the growing system.",
-      },
-    ],
-  },
-  farm: {
-    kicker: "Farm context",
-    title: "What's Happening At Fancy A Fungi",
-    intro: "The farm is currently focused on production consistency, contamination control, freshness, and careful growth.",
-    defaultAnswer:
-      "Fancy A Fungi is still in a grounded growth stage. The focus is not a huge catalogue of future products; it is reliable White Oyster Mushroom production and strong customer relationships.",
-    contactBody:
-      "Hi Benny, I have a farm update question after visiting Ask The Mushroom Whisper.",
-    questions: [
-      {
-        label: "Can The Mushroom Whisper share live availability?",
-        answer:
-          "Not reliably. Availability depends on this week's harvest rhythm, production reality, and delivery plans. That is a Benny question, and it is best sent through to the farm directly.",
-      },
-      {
-        label: "What is the farm focused on now?",
+        label: "What is the farm focused on?",
         answer:
           "The current focus is White Oyster Mushroom consistency, freshness, contamination control, and customer conversations that match what the farm can honestly supply.",
       },
       {
-        label: "Will there be more farm stories later?",
+        label: "Can I ask about supply?",
         answer:
-          "That is the natural direction. Farm notes, chef tips, seasonal updates, and community questions can be added when they are ready and useful.",
+          "Yes. If you need current availability, wholesale supply, pricing, delivery, or timing, that question should go through to Benny so the answer matches the actual harvest rhythm.",
       },
     ],
   },
-  benny: {
-    kicker: "Farmer handoff",
-    title: "Ask Benny The Farmer",
-    intro: "Some questions need real farm judgement. That is where The Mushroom Whisper steps aside and helps you contact Benny.",
+  learn: {
+    kicker: "Pull up a chair",
+    title: "I'm just here to learn",
+    intro: "Lovely. No rush, no test. Mushrooms are a whole quiet world once you start noticing the details.",
     defaultAnswer:
-      "Good question. If it involves current availability, wholesale supply, delivery, pricing, events, special requests, or this week's harvest, Benny is the right person to answer it.",
+      "Here is a friendly starting point: mushrooms are not plants. The part you cook is the fruiting body, while the hidden mycelium does the patient work before the mushroom appears.",
     contactBody:
-      "Hi Benny, The Mushroom Whisper suggested I send this through because it depends on current farm details.",
+      "Hi Benny, I have a general mushroom question after visiting Ask The Mushroom Whisper.",
     questions: [
       {
-        label: "Can I ask about wholesale supply?",
+        label: "Are mushrooms plants?",
         answer:
-          "Yes. Wholesale supply depends on current production, timing, quantities, and delivery rhythm, so it should go directly to Benny.",
+          "No. Mushrooms are fungi. They do not grow like leafy plants, and they do not make food from sunlight in the same way. They are their own fascinating kingdom.",
       },
       {
-        label: "Can I ask about pricing?",
+        label: "What is mycelium?",
         answer:
-          "Yes, but The Mushroom Whisper should not guess pricing. Send the details through to Benny so the answer reflects the current farm situation.",
+          "Mycelium is the living network that grows through the substrate before mushrooms appear. Think of the mushroom as the visible moment after a lot of quiet work has already happened.",
       },
       {
-        label: "Can I request something special?",
+        label: "Can you identify wild mushrooms?",
         answer:
-          "Yes. Special requests are best treated as conversations, not automated answers. Share what you need, when you need it, and where it needs to go.",
+          "I can talk generally about mushroom safety, but I will not identify a wild mushroom as safe to eat from a casual description or photo. For wild mushrooms, use a qualified local expert before anything goes near a plate.",
       },
     ],
   },
@@ -267,5 +267,5 @@ if (whisperButtons.length > 0) {
     });
   });
 
-  renderWhisperTopic("cook");
+  renderWhisperTopic("grow");
 }

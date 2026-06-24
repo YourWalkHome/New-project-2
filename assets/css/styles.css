@@ -486,6 +486,19 @@ h3 {
   border-bottom: 1px solid var(--line);
 }
 
+.ask-hero {
+  background:
+    linear-gradient(135deg, rgba(248, 245, 237, 0.98), rgba(233, 226, 212, 0.92)),
+    var(--paper);
+}
+
+.ask-hero-note {
+  max-width: 600px;
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 1.04rem;
+}
+
 .page-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.74fr);
@@ -537,18 +550,54 @@ h3 {
 }
 
 .whisper-experience {
-  background: var(--paper-soft);
+  background:
+    linear-gradient(180deg, rgba(251, 250, 246, 0.7), rgba(248, 245, 237, 0.96)),
+    var(--paper-soft);
 }
 
 .whisper-layout {
   display: grid;
-  grid-template-columns: minmax(260px, 0.42fr) minmax(0, 1fr);
+  grid-template-columns: minmax(260px, 0.38fr) minmax(0, 1fr);
   gap: clamp(1.3rem, 4vw, 3rem);
   align-items: start;
 }
 
+.whisper-guide-card {
+  display: grid;
+  gap: 0.8rem;
+  grid-column: 1;
+  padding: 1.2rem;
+  border: 1px solid rgba(184, 107, 75, 0.28);
+  border-radius: var(--radius);
+  background: var(--leaf-deep);
+  color: var(--white);
+  box-shadow: 0 14px 28px rgba(35, 49, 43, 0.12);
+}
+
+.whisper-guide-card .eyebrow {
+  margin-bottom: 0;
+  color: var(--sage);
+}
+
+.whisper-guide-card h2 {
+  font-size: clamp(1.45rem, 2.6vw, 2.1rem);
+}
+
+.whisper-guide-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.whisper-guide-note {
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--mushroom);
+  font-weight: 800;
+}
+
 .whisper-topic-list {
   display: grid;
+  grid-column: 1;
   gap: 0.7rem;
 }
 
@@ -560,7 +609,7 @@ h3 {
   border-radius: var(--radius);
   padding: 1rem;
   color: var(--ink);
-  background: var(--white);
+  background: rgba(255, 255, 255, 0.86);
   box-shadow: 0 10px 24px rgba(35, 49, 43, 0.05);
   font: inherit;
   text-align: left;
@@ -580,7 +629,11 @@ h3 {
 .whisper-topic:focus,
 .whisper-topic.is-active {
   border-color: rgba(47, 93, 70, 0.45);
-  background: rgba(201, 214, 195, 0.24);
+  background: rgba(201, 214, 195, 0.3);
+}
+
+.whisper-topic.is-active {
+  box-shadow: inset 4px 0 0 var(--clay), 0 10px 24px rgba(35, 49, 43, 0.06);
 }
 
 .whisper-topic:focus {
@@ -589,11 +642,15 @@ h3 {
 }
 
 .whisper-panel {
+  grid-column: 2;
+  grid-row: 1 / span 2;
   min-height: 620px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: clamp(1.2rem, 4vw, 2.4rem);
-  background: var(--white);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(248, 245, 237, 0.72)),
+    var(--white);
   box-shadow: var(--shadow);
 }
 
@@ -642,7 +699,7 @@ h3 {
   padding: clamp(1rem, 3vw, 1.4rem);
   border-left: 4px solid var(--clay);
   border-radius: 0 var(--radius) var(--radius) 0;
-  background: var(--paper);
+  background: rgba(248, 245, 237, 0.9);
 }
 
 .whisper-answer p {
@@ -886,6 +943,13 @@ textarea:focus,
   .contact-grid,
   .whisper-layout {
     grid-template-columns: 1fr;
+  }
+
+  .whisper-guide-card,
+  .whisper-topic-list,
+  .whisper-panel {
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .whisper-panel {
