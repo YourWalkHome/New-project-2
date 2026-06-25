@@ -56,10 +56,10 @@ if (contactForm) {
 const whisperTopics = {
   grow: {
     kicker: "Growing curiosity",
-    title: "I'm curious about growing mushrooms",
-    intro: "Hmm, that's a good mushroom question. Mushrooms are quiet workers: they like the right food, airflow, humidity, temperature, and patience.",
+    title: "Can I grow mushrooms at home?",
+    intro: "Hmm, that's a good mushroom question. Start simple: mushrooms like clean conditions, steady moisture, fresh air, and patience.",
     defaultAnswer:
-      "Start with the basics: mushrooms need clean conditions, a suitable substrate, steady moisture, and enough fresh air. Fancy A Fungi focuses on getting those quiet details consistent before chasing anything fancy.",
+      "A good kit, clean hands, steady moisture, enough fresh air, and a little patience will teach you plenty before things get fancy.",
     contactBody:
       "Hi Benny, I have a mushroom growing question after visiting Ask The Mushroom Whisper.",
     questions: [
@@ -108,7 +108,7 @@ const whisperTopics = {
   },
   cook: {
     kicker: "Kitchen and freshness",
-    title: "How do I store or cook these?",
+    title: "How do I cook these?",
     intro: "Good fresh mushrooms deserve a gentle hand and a hot pan. White Oysters are quick, savoury, and forgiving once you know their rhythm.",
     defaultAnswer:
       "Keep them cool, give them a little airflow, and cook them with enough heat to let moisture move off. Then bring in garlic, butter, herbs, soy, lemon, chilli, cream, or whatever direction dinner is taking.",
@@ -193,6 +193,9 @@ const whisperIntro = document.querySelector("[data-whisper-intro]");
 const whisperAnswer = document.querySelector("[data-whisper-answer]");
 const whisperQuestions = document.querySelector("[data-whisper-questions]");
 const whisperContact = document.querySelector("[data-whisper-contact]");
+const whisperNoteForm = document.querySelector("[data-whisper-note-form]");
+const whisperNoteInput = document.querySelector("[data-whisper-note]");
+const whisperNoteStatus = document.querySelector("[data-whisper-note-status]");
 
 function setWhisperAnswer(text) {
   if (!whisperAnswer) {
@@ -268,4 +271,36 @@ if (whisperButtons.length > 0) {
   });
 
   renderWhisperTopic("grow");
+}
+
+if (whisperNoteForm && whisperNoteInput) {
+  whisperNoteForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const question = whisperNoteInput.value.trim();
+
+    if (!question) {
+      whisperNoteInput.focus();
+      return;
+    }
+
+    const subject = encodeURIComponent("Fancy A Fungi question - The Mushroom Whisper");
+    const body = encodeURIComponent(
+      [
+        "Hi Benny,",
+        "",
+        "I pulled up a chair with The Mushroom Whisper and had this question:",
+        "",
+        question,
+        "",
+        "Thanks,",
+      ].join("\n")
+    );
+
+    window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+
+    if (whisperNoteStatus) {
+      whisperNoteStatus.textContent = "Good question. I have prepared that as a note for Benny so the farm answer stays honest.";
+    }
+  });
 }

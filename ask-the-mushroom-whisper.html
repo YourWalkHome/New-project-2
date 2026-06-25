@@ -30,74 +30,84 @@
     </header>
 
     <main id="main">
-      <section class="page-hero ask-hero">
-        <div class="container page-hero-grid">
-          <div>
-            <p class="eyebrow">Farm-gate mushroom chat</p>
-            <h1>Ask The Mushroom Whisper</h1>
-            <p class="hero-lead">Pull up a chair. What's growing on your mind?</p>
-            <p class="ask-hero-note">A warm little corner for practical mushroom wisdom, kitchen questions, grow-room curiosity, and a gentle nudge toward Benny when the answer depends on the farm.</p>
-          </div>
-          <img src="assets/images/white-oyster-hero.png" alt="Fresh white oyster mushrooms in a calm farm setting">
-        </div>
-      </section>
-
-      <section class="section whisper-experience" aria-labelledby="whisper-title">
-        <div class="container whisper-layout">
-          <aside class="whisper-guide-card" aria-label="The Mushroom Whisper welcome">
-            <p class="eyebrow">The Mushroom Whisper is here</p>
-            <h2>Let's have a proper look at that.</h2>
-            <p>Choose the closest starting point. The Whisper will keep things practical, curious, and grounded in real mushroom care.</p>
-            <p class="whisper-guide-note">Small clue, big difference with mushrooms.</p>
-          </aside>
-
-          <div class="whisper-topic-list" aria-label="Mushroom Whisper topics">
-            <button class="whisper-topic is-active" type="button" data-whisper-topic="grow" aria-pressed="true">
-              <span>I'm curious about growing mushrooms</span>
-              <small>Gentle growing basics, farm rhythm, and what mushrooms need.</small>
-            </button>
-            <button class="whisper-topic" type="button" data-whisper-topic="kit" aria-pressed="false">
-              <span>Something looks wrong with my grow kit</span>
-              <small>Tell me what you're seeing first: colour, smell, texture, timing.</small>
-            </button>
-            <button class="whisper-topic" type="button" data-whisper-topic="cook" aria-pressed="false">
-              <span>How do I store or cook these?</span>
-              <small>Freshness, handling, quick meals, and White Oyster ideas.</small>
-            </button>
-            <button class="whisper-topic" type="button" data-whisper-topic="difference" aria-pressed="false">
-              <span>What makes Fancy A Fungi different?</span>
-              <small>Harvest-to-order, local growing, fresh supply, and care.</small>
-            </button>
-            <button class="whisper-topic" type="button" data-whisper-topic="learn" aria-pressed="false">
-              <span>I'm just here to learn</span>
-              <small>A few friendly mushroom things from the farm table.</small>
-            </button>
+      <section class="ask-arrival" aria-labelledby="whisper-title">
+        <div class="ask-arrival-grid">
+          <div class="arrival-scene" aria-label="Fresh white oyster mushrooms on the Fancy A Fungi harvest table">
+            <img src="assets/images/white-oyster-hero.png" alt="Fresh white oyster mushrooms on a wooden harvest table">
+            <div class="arrival-shade" aria-hidden="true"></div>
+            <div class="arrival-copy">
+              <p class="eyebrow">Fancy A Fungi farm gate</p>
+              <h1>Ask The Mushroom Whisper</h1>
+              <p>Morning. Pull up a chair.</p>
+              <p class="arrival-question">What's growing on your mind?</p>
+            </div>
+            <p class="arrival-note">Small clues make big differences with mushrooms.</p>
           </div>
 
-          <article class="whisper-panel" aria-live="polite">
-            <p class="eyebrow" data-whisper-kicker>Growing curiosity</p>
-            <h2 id="whisper-title" data-whisper-title>I'm curious about growing mushrooms</h2>
-            <p class="whisper-intro" data-whisper-intro>Hmm, that's a good mushroom question. Mushrooms are quiet workers: they like the right food, airflow, humidity, temperature, and patience.</p>
-
-            <div class="question-chip-wrap" data-whisper-questions aria-label="Suggested questions"></div>
-
-            <div class="whisper-answer" data-whisper-answer>
-              <p>Start with the basics: mushrooms need clean conditions, a suitable substrate, steady moisture, and enough fresh air. Fancy A Fungi focuses on getting those quiet details consistent before chasing anything fancy.</p>
+          <article class="whisper-panel arrival-panel" aria-live="polite">
+            <div class="arrival-guide">
+              <span class="guide-mark" aria-hidden="true">MW</span>
+              <div>
+                <p class="eyebrow">The Mushroom Whisper</p>
+                <h2>Here to help. Always learning.</h2>
+              </div>
             </div>
 
-            <div class="whisper-handoff">
-              <p>If your question depends on this week's harvest, supply, pricing, delivery, or a special order, Benny is the right person to answer it.</p>
-              <a class="button button-primary" href="contact.html" data-whisper-contact>Send this to Benny</a>
+            <div class="whisper-welcome">
+              <p>Morning. I'm The Mushroom Whisper.</p>
+              <p>No fancy mushroom words needed. Tell me what you're curious about.</p>
+            </div>
+
+            <p class="starter-heading">Try asking something like...</p>
+            <div class="whisper-topic-list arrival-starters" aria-label="Mushroom Whisper conversation starters">
+              <button class="whisper-topic is-active" type="button" data-whisper-topic="grow" aria-pressed="true">
+                <span>Can I grow mushrooms at home?</span>
+              </button>
+              <button class="whisper-topic" type="button" data-whisper-topic="kit" aria-pressed="false">
+                <span>Something looks wrong with my grow kit</span>
+              </button>
+              <button class="whisper-topic" type="button" data-whisper-topic="cook" aria-pressed="false">
+                <span>How do I cook these?</span>
+              </button>
+              <button class="whisper-topic" type="button" data-whisper-topic="difference" aria-pressed="false">
+                <span>What makes Fancy A Fungi different?</span>
+              </button>
+              <button class="whisper-topic" type="button" data-whisper-topic="learn" aria-pressed="false">
+                <span>I'm just here to learn</span>
+              </button>
+            </div>
+
+            <form class="arrival-question-form" data-whisper-note-form>
+              <label class="sr-only" for="whisper-question">Ask The Mushroom Whisper</label>
+              <input id="whisper-question" name="question" type="text" placeholder="Ask away..." autocomplete="off" data-whisper-note required>
+              <button class="button button-primary" type="submit">Send</button>
+            </form>
+            <p class="arrival-safety-note">Wild mushrooms or safety? Please read the careful note below.</p>
+            <p class="form-note" data-whisper-note-status></p>
+
+            <div class="arrival-response">
+              <p class="eyebrow" data-whisper-kicker>Growing curiosity</p>
+              <h3 id="whisper-title" data-whisper-title>Can I grow mushrooms at home?</h3>
+              <p class="whisper-intro" data-whisper-intro>Hmm, that's a good mushroom question. Mushrooms are quiet workers: they like the right food, airflow, humidity, temperature, and patience.</p>
+              <div class="question-chip-wrap" data-whisper-questions aria-label="Suggested questions" hidden></div>
+              <div class="whisper-answer" data-whisper-answer>
+                <p>Start simple. A good kit, clean hands, steady moisture, enough fresh air, and a little patience will teach you plenty before things get fancy.</p>
+              </div>
+            </div>
+
+            <div class="whisper-handoff arrival-handoff">
+              <p>For current harvest, supply, pricing, delivery, or special requests, Benny is the right person.</p>
+              <a class="button button-primary" href="contact.html" data-whisper-contact>Contact Benny</a>
             </div>
           </article>
         </div>
       </section>
 
-      <section class="section values-band">
+      <section class="section values-band safety-band">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Farm-gate boundaries</p>
-            <h2>Curious, careful, and honest about what belongs with a person</h2>
+            <p class="eyebrow">A careful farm note</p>
+            <h2>A word about wild mushrooms and safety</h2>
           </div>
           <div class="boundary-grid">
             <article>
