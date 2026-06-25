@@ -53,212 +53,232 @@ if (contactForm) {
   });
 }
 
-const whisperTopics = {
-  grow: {
-    kicker: "Growing curiosity",
-    title: "Can I grow mushrooms at home?",
-    intro: "Hmm, that's a good mushroom question. Start simple: mushrooms like clean conditions, steady moisture, fresh air, and patience.",
-    defaultAnswer:
-      "A good kit, clean hands, steady moisture, enough fresh air, and a little patience will teach you plenty before things get fancy.",
-    contactBody:
-      "Hi Benny, I have a mushroom growing question after visiting Ask The Mushroom Whisper.",
-    questions: [
-      {
-        label: "What do mushrooms need to grow well?",
-        answer:
-          "They need the right food, moisture, fresh air, temperature, and cleanliness. Small changes matter. Too dry and they stall; too wet and things can go sideways; too little fresh air and the mushrooms can grow long and leggy.",
-      },
-      {
-        label: "Why does consistency matter?",
-        answer:
-          "Mushrooms respond to their environment. A steady rhythm helps the grower understand what changed, what worked, and what needs adjusting. That is why Fancy A Fungi is careful about contamination control and repeatable production.",
-      },
-      {
-        label: "Can I grow mushrooms at home?",
-        answer:
-          "Yes, but start simple. Use a reputable kit, follow the instructions, and pay attention to what you see and smell. Tell me the timing, colour, moisture, and airflow first, and we can have a more useful look.",
-      },
-    ],
-  },
-  kit: {
-    kicker: "Grow-kit check",
-    title: "Something looks wrong with my grow kit",
-    intro: "Let's have a proper look at that. With grow kits, the little clues matter: colour, smell, texture, moisture, airflow, and timing.",
-    defaultAnswer:
-      "First, do not panic. Tell me what you are seeing before changing too much. A photo can help, but unusual colours, sour smells, slimy patches, or fast-spreading fuzzy growth should be treated cautiously and checked with the kit supplier or a knowledgeable grower.",
-    contactBody:
-      "Hi Benny, I have a grow-kit question after visiting Ask The Mushroom Whisper.",
-    questions: [
-      {
-        label: "What should I describe first?",
-        answer:
-          "Tell me the colour, smell, texture, how many days since opening, whether the kit looks too wet or too dry, and where it is sitting. Small clue, big difference with mushrooms.",
-      },
-      {
-        label: "When should I stop and ask someone?",
-        answer:
-          "If you notice strong sour or rotten smells, black or green patches, sliminess, or anything spreading quickly, pause and check with the kit supplier or a local grower. Do not taste anything from a kit that seems off.",
-      },
-      {
-        label: "Could it just be normal mushroom fuzz?",
-        answer:
-          "Sometimes white fuzzy growth is just mycelium doing its work. But colour, smell, timing, and texture all matter. If it is not clean white, or it smells wrong, treat it as a question for a real person with the kit in front of them.",
-      },
-    ],
-  },
+const whisperReplies = {
   cook: {
-    kicker: "Kitchen and freshness",
-    title: "How do I cook these?",
-    intro: "Good fresh mushrooms deserve a gentle hand and a hot pan. White Oysters are quick, savoury, and forgiving once you know their rhythm.",
-    defaultAnswer:
-      "Keep them cool, give them a little airflow, and cook them with enough heat to let moisture move off. Then bring in garlic, butter, herbs, soy, lemon, chilli, cream, or whatever direction dinner is taking.",
-    contactBody:
-      "Hi Benny, I have a cooking or storage question after visiting Ask The Mushroom Whisper.",
-    questions: [
-      {
-        label: "How should I store them?",
-        answer:
-          "Keep them in the fridge and avoid crushing them. Breathable packaging or a paper bag helps manage moisture. Try to use them while they still look firm, fresh, and lively.",
-      },
-      {
-        label: "How should I cook them?",
-        answer:
-          "Tear or slice them, give them space in a hot pan, and let them take on light colour before adding the softer flavours. If the pan is crowded, they steam before they brown.",
-      },
-      {
-        label: "What do they go with?",
-        answer:
-          "Eggs, sourdough, pasta, rice, noodles, roasted vegetables, chicken, seafood, soft herbs, butter, miso, soy, cream, and lemon all sit nicely with White Oyster Mushrooms.",
-      },
+    prompt: "How do I cook Oyster Mushrooms?",
+    paragraphs: [
+      "Beautiful question. Oyster Mushrooms love a hot pan and a little patience. Tear them into pieces, give them space, and let their moisture cook off before you start fussing with flavours.",
+      "Once the edges turn golden, garlic, butter, soy, lemon, herbs, chilli, miso, or cream can all take them somewhere delicious.",
     ],
+    whisper:
+      "The trick is not rushing them. Mushrooms tell you when they're ready if you give them time.",
   },
-  difference: {
-    kicker: "From the farm",
-    title: "What makes Fancy A Fungi different?",
-    intro: "This is where the farm voice matters. Fancy A Fungi is not trying to sound bigger than it is; it is trying to grow well, supply honestly, and keep the relationship direct.",
-    defaultAnswer:
-      "Fancy A Fungi grows White Oyster Mushrooms in the Lockyer Valley with a harvest-to-order mindset, rainwater, organic soybean hulls, untreated hardwood sawdust, and direct grower relationships.",
-    contactBody:
-      "Hi Benny, I have a Fancy A Fungi question after visiting Ask The Mushroom Whisper.",
-    questions: [
+  sauce: {
+    prompt: "Can you help me find a mushroom sauce recipe?",
+    paragraphs: [
+      "Absolutely. Here are a few places to start exploring: creamy garlic mushroom sauce, soy and miso mushrooms over rice, lemon-herb mushrooms for pasta, or a peppery pan sauce with butter and a splash of stock.",
+      "If you're browsing recipes or videos, look for ones that brown the mushrooms first. That usually gives the sauce more flavour.",
+    ],
+    whisper:
+      "Start with the pan, then choose the sauce. Golden mushrooms make almost any sauce feel a little more serious.",
+  },
+  buy: {
+    prompt: "Where can I buy mushrooms near me?",
+    paragraphs: [
+      "That one depends on where you are, what is ready this week, and the delivery rhythm. Benny is the right person for current availability and supply details.",
+      "The Mushroom Whisper can help with cooking and storage ideas, but real farm stock should come from the farmer.",
+    ],
+    whisper:
+      "Freshness is a real-world thing. Best to ask the person looking at the harvest.",
+    actions: [
       {
-        label: "What does harvest-to-order mean?",
-        answer:
-          "It means supply conversations stay close to what is actually ready. That helps keep produce fresher, expectations clearer, and the relationship more direct.",
-      },
-      {
-        label: "What is the farm focused on?",
-        answer:
-          "The current focus is White Oyster Mushroom consistency, freshness, contamination control, and customer conversations that match what the farm can honestly supply.",
-      },
-      {
-        label: "Can I ask about supply?",
-        answer:
-          "Yes. If you need current availability, wholesale supply, pricing, delivery, or timing, that question should go through to Benny so the answer matches the actual harvest rhythm.",
+        label: "Ask Benny The Farmer",
+        href: "contact.html",
       },
     ],
   },
   learn: {
-    kicker: "Pull up a chair",
-    title: "I'm just here to learn",
-    intro: "Lovely. No rush, no test. Mushrooms are a whole quiet world once you start noticing the details.",
-    defaultAnswer:
-      "Here is a friendly starting point: mushrooms are not plants. The part you cook is the fruiting body, while the hidden mycelium does the patient work before the mushroom appears.",
-    contactBody:
-      "Hi Benny, I have a general mushroom question after visiting Ask The Mushroom Whisper.",
-    questions: [
+    prompt: "Tell me something interesting about mushrooms.",
+    paragraphs: [
+      "Here's a good one: the mushroom you cook is only the visible part. Before that, mycelium has been quietly growing through the substrate, doing the patient work you do not see.",
+      "So a mushroom is a little bit like the farm saying, 'Righto, now you can see what I've been up to.'",
+    ],
+    whisper:
+      "Mushrooms reward people who notice small things.",
+  },
+  curious: {
+    prompt: "I'm just here to learn.",
+    paragraphs: [
+      "Lovely. No test, no pressure, no need to know the right words. You can ask about cooking, storing, growing, farm practice, flavour, or just odd little mushroom facts.",
+      "A good place to begin is this: mushrooms are fungi, not plants, and they have their own quiet way of doing things.",
+    ],
+    whisper:
+      "Curiosity is welcome at the farm gate.",
+  },
+  storage: {
+    prompt: "How should I store fresh mushrooms?",
+    paragraphs: [
+      "Keep them cool, avoid crushing them, and give them a little breathing room. A paper bag or breathable packaging helps manage moisture better than sealing them up tightly.",
+      "Use them while they still look firm, fresh, and lively. If they smell sour, feel slimy, or look wrong, pause and use your judgement.",
+    ],
+    whisper:
+      "Fresh mushrooms like care, not confinement.",
+  },
+  grow: {
+    prompt: "Can I grow mushrooms at home?",
+    paragraphs: [
+      "You can, and a simple kit is usually the friendliest place to start. Clean hands, steady moisture, fresh air, and patience will teach you plenty before anything gets complicated.",
+      "Tell me what you're growing, how long it has been going, where it is sitting, and what you can see. Small clues matter.",
+    ],
+    whisper:
+      "Mushrooms are quiet teachers. They show you what changed if you learn to look.",
+  },
+  kit: {
+    prompt: "Something looks wrong with my grow kit.",
+    paragraphs: [
+      "Let's have a proper look at the clues first: colour, smell, texture, moisture, airflow, and timing. Do not taste anything from a kit that seems off.",
+      "Strong sour smells, black or green patches, sliminess, or fast-spreading fuzzy growth should be treated cautiously and checked with the kit supplier or a knowledgeable local grower.",
+    ],
+    whisper:
+      "With grow kits, the small clues are often the useful ones.",
+  },
+  safety: {
+    prompt: "Can you identify this wild mushroom?",
+    paragraphs: [
+      "I need to be careful here. I cannot identify a wild mushroom as safe to eat from a photo, description, or casual chat.",
+      "For wild mushrooms, please speak with a qualified local expert before anything goes near a plate.",
+    ],
+    whisper:
+      "Mushroom curiosity is wonderful. Mushroom safety comes first.",
+  },
+  health: {
+    prompt: "What are the health benefits of mushrooms?",
+    paragraphs: [
+      "I can talk generally about mushrooms as food, but I cannot give medical advice or make health benefit claims.",
+      "If a question relates to health conditions, supplements, treatment, or nutrition advice for a person, it belongs with a qualified health professional.",
+    ],
+    whisper:
+      "Good food questions are welcome. Medical questions need the right human expert.",
+  },
+  default: {
+    prompt: "Mushroom question",
+    paragraphs: [
+      "Good mushroom question. I can help with cooking, storage, simple growing observations, mushroom facts, and general Fancy A Fungi context.",
+      "If your question depends on current stock, pricing, delivery, wholesale supply, or this week's harvest, Benny is the right person to ask.",
+    ],
+    whisper:
+      "Tell me what you're seeing first. Small clue, big difference with mushrooms.",
+    actions: [
       {
-        label: "Are mushrooms plants?",
-        answer:
-          "No. Mushrooms are fungi. They do not grow like leafy plants, and they do not make food from sunlight in the same way. They are their own fascinating kingdom.",
-      },
-      {
-        label: "What is mycelium?",
-        answer:
-          "Mycelium is the living network that grows through the substrate before mushrooms appear. Think of the mushroom as the visible moment after a lot of quiet work has already happened.",
-      },
-      {
-        label: "Can you identify wild mushrooms?",
-        answer:
-          "I can talk generally about mushroom safety, but I will not identify a wild mushroom as safe to eat from a casual description or photo. For wild mushrooms, use a qualified local expert before anything goes near a plate.",
+        label: "Ask Benny The Farmer",
+        href: "contact.html",
       },
     ],
   },
 };
 
 const whisperButtons = document.querySelectorAll("[data-whisper-topic]");
-const whisperKicker = document.querySelector("[data-whisper-kicker]");
-const whisperTitle = document.querySelector("[data-whisper-title]");
-const whisperIntro = document.querySelector("[data-whisper-intro]");
-const whisperAnswer = document.querySelector("[data-whisper-answer]");
-const whisperQuestions = document.querySelector("[data-whisper-questions]");
-const whisperContact = document.querySelector("[data-whisper-contact]");
+const whisperLog = document.querySelector("[data-whisper-log]");
 const whisperNoteForm = document.querySelector("[data-whisper-note-form]");
 const whisperNoteInput = document.querySelector("[data-whisper-note]");
 const whisperNoteStatus = document.querySelector("[data-whisper-note-status]");
 
-function setWhisperAnswer(text) {
-  if (!whisperAnswer) {
+function addChatMessage(kind, speaker, paragraphs, reply = {}) {
+  if (!whisperLog) {
     return;
   }
 
-  whisperAnswer.replaceChildren();
-  const paragraph = document.createElement("p");
-  paragraph.textContent = text;
-  whisperAnswer.append(paragraph);
-}
+  const row = document.createElement("div");
+  row.className = `chat-row is-${kind}`;
 
-function setWhisperContact(topic) {
-  if (!whisperContact) {
-    return;
-  }
+  const speakerLabel = document.createElement("div");
+  speakerLabel.className = "chat-speaker";
+  speakerLabel.textContent = speaker;
 
-  const subject = encodeURIComponent(`Fancy A Fungi enquiry - ${topic.title}`);
-  const body = encodeURIComponent(
-    [
-      topic.contactBody,
-      "",
-      "My question:",
-      "",
-    ].join("\n")
-  );
+  const bubble = document.createElement("div");
+  bubble.className = "chat-bubble";
 
-  whisperContact.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
-}
-
-function renderWhisperTopic(topicKey) {
-  const topic = whisperTopics[topicKey];
-
-  if (!topic || !whisperKicker || !whisperTitle || !whisperIntro || !whisperQuestions) {
-    return;
-  }
-
-  whisperKicker.textContent = topic.kicker;
-  whisperTitle.textContent = topic.title;
-  whisperIntro.textContent = topic.intro;
-  setWhisperAnswer(topic.defaultAnswer);
-  setWhisperContact(topic);
-
-  whisperQuestions.replaceChildren();
-  topic.questions.forEach((question) => {
-    const button = document.createElement("button");
-    button.className = "question-chip";
-    button.type = "button";
-    button.textContent = question.label;
-    button.addEventListener("click", () => {
-      whisperQuestions.querySelectorAll(".question-chip").forEach((chip) => {
-        chip.classList.remove("is-active");
-      });
-      button.classList.add("is-active");
-      setWhisperAnswer(question.answer);
-    });
-    whisperQuestions.append(button);
+  paragraphs.forEach((text) => {
+    const paragraph = document.createElement("p");
+    paragraph.textContent = text;
+    bubble.append(paragraph);
   });
+
+  if (reply.whisper) {
+    const whisper = document.createElement("p");
+    whisper.className = "little-whisper";
+    whisper.textContent = `A little whisper: ${reply.whisper}`;
+    bubble.append(whisper);
+  }
+
+  if (reply.actions) {
+    const actions = document.createElement("div");
+    actions.className = "chat-actions";
+
+    reply.actions.forEach((action) => {
+      const link = document.createElement("a");
+      link.className = "button button-primary";
+      link.href = action.href;
+      link.textContent = action.label;
+      actions.append(link);
+    });
+
+    bubble.append(actions);
+  }
+
+  row.append(speakerLabel, bubble);
+  whisperLog.append(row);
+  whisperLog.scrollTop = whisperLog.scrollHeight;
 }
 
-if (whisperButtons.length > 0) {
+function findWhisperReply(question) {
+  const lowerQuestion = question.toLowerCase();
+
+  if (lowerQuestion.includes("wild") || lowerQuestion.includes("identify") || lowerQuestion.includes("poison") || lowerQuestion.includes("safe to eat") || lowerQuestion.includes("forage")) {
+    return whisperReplies.safety;
+  }
+
+  if (lowerQuestion.includes("health") || lowerQuestion.includes("benefit") || lowerQuestion.includes("medical") || lowerQuestion.includes("nutrition") || lowerQuestion.includes("supplement")) {
+    return whisperReplies.health;
+  }
+
+  if (lowerQuestion.includes("buy") || lowerQuestion.includes("near me") || lowerQuestion.includes("stock") || lowerQuestion.includes("available") || lowerQuestion.includes("price") || lowerQuestion.includes("delivery") || lowerQuestion.includes("wholesale") || lowerQuestion.includes("order")) {
+    return whisperReplies.buy;
+  }
+
+  if (lowerQuestion.includes("sauce") || lowerQuestion.includes("recipe")) {
+    return whisperReplies.sauce;
+  }
+
+  if (lowerQuestion.includes("store") || lowerQuestion.includes("storage") || lowerQuestion.includes("fridge") || lowerQuestion.includes("fresh")) {
+    return whisperReplies.storage;
+  }
+
+  if (lowerQuestion.includes("cook") || lowerQuestion.includes("oyster") || lowerQuestion.includes("pan")) {
+    return whisperReplies.cook;
+  }
+
+  if (lowerQuestion.includes("kit") || lowerQuestion.includes("wrong") || lowerQuestion.includes("contamination") || lowerQuestion.includes("mould") || lowerQuestion.includes("mold")) {
+    return whisperReplies.kit;
+  }
+
+  if (lowerQuestion.includes("grow") || lowerQuestion.includes("home")) {
+    return whisperReplies.grow;
+  }
+
+  if (lowerQuestion.includes("learn") || lowerQuestion.includes("interesting") || lowerQuestion.includes("fact")) {
+    return whisperReplies.learn;
+  }
+
+  return whisperReplies.default;
+}
+
+function renderConversation(question, reply) {
+  addChatMessage("user", "You", [question]);
+  addChatMessage("whisper", "The Mushroom Whisper", reply.paragraphs, reply);
+
+  if (whisperNoteStatus) {
+    whisperNoteStatus.textContent = reply.actions
+      ? "That one belongs with Benny when it depends on the real farm rhythm."
+      : "Ask another one when you're ready. The farm gate is open.";
+  }
+}
+
+if (whisperButtons.length > 0 && whisperLog) {
   whisperButtons.forEach((button) => {
     button.addEventListener("click", () => {
+      const topic = whisperReplies[button.dataset.whisperTopic] || whisperReplies.default;
+
       whisperButtons.forEach((topicButton) => {
         topicButton.classList.remove("is-active");
         topicButton.setAttribute("aria-pressed", "false");
@@ -266,14 +286,12 @@ if (whisperButtons.length > 0) {
 
       button.classList.add("is-active");
       button.setAttribute("aria-pressed", "true");
-      renderWhisperTopic(button.dataset.whisperTopic);
+      renderConversation(topic.prompt, topic);
     });
   });
-
-  renderWhisperTopic("grow");
 }
 
-if (whisperNoteForm && whisperNoteInput) {
+if (whisperNoteForm && whisperNoteInput && whisperLog) {
   whisperNoteForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
@@ -284,23 +302,8 @@ if (whisperNoteForm && whisperNoteInput) {
       return;
     }
 
-    const subject = encodeURIComponent("Fancy A Fungi question - The Mushroom Whisper");
-    const body = encodeURIComponent(
-      [
-        "Hi Benny,",
-        "",
-        "I pulled up a chair with The Mushroom Whisper and had this question:",
-        "",
-        question,
-        "",
-        "Thanks,",
-      ].join("\n")
-    );
-
-    window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
-
-    if (whisperNoteStatus) {
-      whisperNoteStatus.textContent = "Good question. I have prepared that as a note for Benny so the farm answer stays honest.";
-    }
+    renderConversation(question, findWhisperReply(question));
+    whisperNoteInput.value = "";
+    whisperNoteInput.focus();
   });
 }

@@ -30,75 +30,65 @@
     </header>
 
     <main id="main">
-      <section class="ask-arrival" aria-labelledby="whisper-title">
-        <div class="ask-arrival-grid">
-          <div class="arrival-scene" aria-label="Fresh white oyster mushrooms on the Fancy A Fungi harvest table">
-            <img src="assets/images/white-oyster-hero.png" alt="Fresh white oyster mushrooms on a wooden harvest table">
-            <div class="arrival-shade" aria-hidden="true"></div>
-            <div class="arrival-copy">
-              <p class="eyebrow">Fancy A Fungi farm gate</p>
-              <h1>Ask The Mushroom Whisper</h1>
-              <p>Morning. Pull up a chair.</p>
-              <p class="arrival-question">What's growing on your mind?</p>
-            </div>
-            <p class="arrival-note">Small clues make big differences with mushrooms.</p>
-          </div>
+      <section class="ask-arrival ask-arrival-v11" aria-labelledby="whisper-title">
+        <img class="arrival-backdrop" src="assets/images/white-oyster-hero.png" alt="Fresh white oyster mushrooms on a wooden harvest table">
+        <div class="arrival-shade" aria-hidden="true"></div>
 
-          <article class="whisper-panel arrival-panel" aria-live="polite">
-            <div class="arrival-guide">
+        <div class="container ask-gate">
+          <div class="porch-copy">
+            <p class="eyebrow">Fancy A Fungi farm gate</p>
+            <h1 id="whisper-title">Ask The Mushroom Whisper</h1>
+            <p class="porch-greeting">G'day mate. Pull up a chair and let's talk mushrooms.</p>
+            <p>Recipes, storage, growing, fungi facts, or farm questions - you're welcome here.</p>
+            <aside class="porch-note" aria-label="A farm-gate note">
+              <p>No question is too small.</p>
+              <p>Let's go for a little walk through the wonderful world of mushrooms.</p>
+            </aside>
+          </div>
+          <article class="conversation-card" aria-label="Conversation with The Mushroom Whisper">
+            <div class="conversation-heading">
               <span class="guide-mark" aria-hidden="true">MW</span>
               <div>
-                <p class="eyebrow">The Mushroom Whisper</p>
-                <h2>Here to help. Always learning.</h2>
+                <p class="eyebrow">Start a conversation</p>
+                <h2>The Mushroom Whisper is here.</h2>
               </div>
             </div>
 
-            <div class="whisper-welcome">
-              <p>Morning. I'm The Mushroom Whisper.</p>
-              <p>No fancy mushroom words needed. Tell me what you're curious about.</p>
+            <div class="conversation-log" data-whisper-log aria-live="polite" aria-label="Mushroom Whisper conversation">
+              <div class="chat-row is-whisper">
+                <div class="chat-speaker">The Mushroom Whisper</div>
+                <div class="chat-bubble">
+                  <p>Morning. I'm The Mushroom Whisper. No fancy mushroom words needed. What's growing on your mind today?</p>
+                </div>
+              </div>
             </div>
 
-            <p class="starter-heading">Try asking something like...</p>
-            <div class="whisper-topic-list arrival-starters" aria-label="Mushroom Whisper conversation starters">
-              <button class="whisper-topic is-active" type="button" data-whisper-topic="grow" aria-pressed="true">
-                <span>Can I grow mushrooms at home?</span>
-              </button>
-              <button class="whisper-topic" type="button" data-whisper-topic="kit" aria-pressed="false">
-                <span>Something looks wrong with my grow kit</span>
-              </button>
-              <button class="whisper-topic" type="button" data-whisper-topic="cook" aria-pressed="false">
-                <span>How do I cook these?</span>
-              </button>
-              <button class="whisper-topic" type="button" data-whisper-topic="difference" aria-pressed="false">
-                <span>What makes Fancy A Fungi different?</span>
-              </button>
-              <button class="whisper-topic" type="button" data-whisper-topic="learn" aria-pressed="false">
-                <span>I'm just here to learn</span>
-              </button>
-            </div>
-
-            <form class="arrival-question-form" data-whisper-note-form>
+            <form class="conversation-compose" data-whisper-note-form>
               <label class="sr-only" for="whisper-question">Ask The Mushroom Whisper</label>
-              <input id="whisper-question" name="question" type="text" placeholder="Ask away..." autocomplete="off" data-whisper-note required>
+              <input id="whisper-question" name="question" type="text" placeholder="Ask me anything about mushrooms..." autocomplete="off" data-whisper-note required>
               <button class="button button-primary" type="submit">Send</button>
             </form>
-            <p class="arrival-safety-note">Wild mushrooms or safety? Please read the careful note below.</p>
             <p class="form-note" data-whisper-note-status></p>
 
-            <div class="arrival-response">
-              <p class="eyebrow" data-whisper-kicker>Growing curiosity</p>
-              <h3 id="whisper-title" data-whisper-title>Can I grow mushrooms at home?</h3>
-              <p class="whisper-intro" data-whisper-intro>Hmm, that's a good mushroom question. Mushrooms are quiet workers: they like the right food, airflow, humidity, temperature, and patience.</p>
-              <div class="question-chip-wrap" data-whisper-questions aria-label="Suggested questions" hidden></div>
-              <div class="whisper-answer" data-whisper-answer>
-                <p>Start simple. A good kit, clean hands, steady moisture, enough fresh air, and a little patience will teach you plenty before things get fancy.</p>
-              </div>
+            <div class="conversation-starters" aria-label="Conversation starters">
+              <button class="conversation-starter" type="button" data-whisper-topic="cook" aria-pressed="false">
+                <span>How do I cook Oyster Mushrooms?</span>
+              </button>
+              <button class="conversation-starter" type="button" data-whisper-topic="sauce" aria-pressed="false">
+                <span>Can you help me find a mushroom sauce recipe?</span>
+              </button>
+              <button class="conversation-starter" type="button" data-whisper-topic="buy" aria-pressed="false">
+                <span>Where can I buy mushrooms near me?</span>
+              </button>
+              <button class="conversation-starter" type="button" data-whisper-topic="learn" aria-pressed="false">
+                <span>Tell me something interesting about mushrooms.</span>
+              </button>
+              <button class="conversation-starter" type="button" data-whisper-topic="curious" aria-pressed="false">
+                <span>I'm just here to learn.</span>
+              </button>
             </div>
 
-            <div class="whisper-handoff arrival-handoff">
-              <p>For current harvest, supply, pricing, delivery, or special requests, Benny is the right person.</p>
-              <a class="button button-primary" href="contact.html" data-whisper-contact>Contact Benny</a>
-            </div>
+            <p class="conversation-promise">I'm here to help, share knowledge, and point you back to Benny when the farm answer matters.</p>
           </article>
         </div>
       </section>
@@ -112,15 +102,15 @@
           <div class="boundary-grid">
             <article>
               <h3>Good for</h3>
-              <p>Cooking ideas, storage tips, grow-kit observations, mushroom facts, and general Fancy A Fungi context.</p>
+              <p>Cooking ideas, storage tips, recipe inspiration, grow-kit observations, mushroom facts, and general Fancy A Fungi learning.</p>
             </article>
             <article>
-              <h3>Hands back to Benny</h3>
-              <p>Current availability, wholesale decisions, delivery details, pricing, events, special requests, and anything that depends on this week's harvest.</p>
+              <h3>Ask Benny</h3>
+              <p>Current stock, pricing, delivery, wholesale supply, special orders, events, and anything that depends on this week's harvest rhythm.</p>
             </article>
             <article>
-              <h3>Clear boundaries</h3>
-              <p>The Mushroom Whisper will not identify wild mushrooms as safe to eat from a casual description or photo. For wild mushroom safety, check with a qualified local expert.</p>
+              <h3>Safety first</h3>
+              <p>The Mushroom Whisper cannot identify wild mushrooms as safe to eat from a photo or description, give medical advice, or make health benefit claims. For wild mushroom safety, speak with a qualified local expert.</p>
             </article>
           </div>
         </div>
